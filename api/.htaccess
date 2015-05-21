@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteBase  /api/
+#RewriteBase  /~user5/rest-client/api/
+RewriteRule "^(.*)" http://rest-server/api/$1 [P]
+

@@ -1,0 +1,73 @@
+@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville:700);
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.searchAuto{
+    text-align: center;
+}
+
+.name{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 26pt;
+    text-align: center;
+}
+
+img {
+    width: 200px;
+    text-align: center;
+}
+
+.content {
+    text-align: center;
+}
+
+.container-img{
+    text-align: center;
+}
+
+.content img {
+    height: 200px !important;
+    width: auto;
+}
+
+.cars {
+    margin-top: 15px;
+}
+
+label{
+    text-align: left !important;
+}
+
+#reserve{
+    text-align: center;
+}
+
+.carDetail{
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+.row {
+    margin-top: 10px;
+}
+
+td{
+    text-align: center;
+}
+
+th{
+    text-align: center;
+}
+
+.glyphicon{
+    cursor: pointer;
+}
