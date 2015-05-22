@@ -1,4 +1,208 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>AutoShop</title>
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen"/>
+        <script src="js/jquery.min.js"></script>
+        <link rel="stylesheet" href="css/main.css">
+
+    </head>
+    <body>
+        <!-- header -->
+        <div class="banner">
+            <div class="container">
+                <div class="header-bottom">
+                    <div class="logo">
+                        <a href="index.html"><img src="images/logo.png" class="img-responsive" alt=""/></a>
+                    </div>
+                    <div class="head-nav">
+                        <span class="menu"> </span>
+                        <ul class="cl-effect-15">
+                            <li><a href="order.html" data-hover="ORDER's">ORDER's</a></li>
+                            <li class="active"><a href="index.html">REGISTRATION</a></li>
+                            <li><a href="gallery.html" data-hover="LOGIN">LOGIN</a></li>
+                            <li><a href="videos.html" data-hover="LOGOUT">LOGOUT</a></li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="    background: #62647d">
+            <div class="container">
+                <div class="col-md-12">
+                    <div class="searchAuto">
+                        <form class="form-inline" role="form">
+                            <p>Search</p>
+                            <div class="form-group">
+                                <input type="text" placeholder="Model" name="model" class="form-control" id="model">
+                            </div>
+                            <div class="form-group">
+                                <input type="number" placeholder="Year" name="year" class="form-control" id="year">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Engine" name="engine" class="form-control" id="engine">
+                            </div>
+                            <div class="form-group">
+                                <select name="color" class="form-control" id="color">
+                                    <option value="">Select a color</option>
+                                    <option value="#c0c0c0">Grey</option>
+                                    <option value="#ffffff">White</option>
+                                    <option value="#286090">Navy blue</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" placeholder="Speed" name="speed" class="form-control" id="speed">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Price in thousands, $" name="price" class="form-control" id="price">
+                            </div>
+                            <input type="reset" value="Reset" class="btn btn-info">
+                            <input type="button" value="Search" class="btn btn-info" id="search">
+                        </form>
+                    </div>            
+                </div>                       
+            </div>
+        </div>
+        <div id="append-all-cars" class="col-md-8 col-md-offset-1"></div>
+
+        <div class="portfolio">
+            <div class="container">
+                <div class="main-box">
+                    <div class="box_wrapper"><h1>Featured Products</h1></div>
+                    <div class="section group">
+                        <div class="col_1_of_4 span_1_of_4">
+                            <img src="images/img11.jpg" alt=""/>
+                            <div class="grid_desc">
+                                <p class="title">Lorem ipsum dolor sitconsectetueradipis</p>
+                                <p class="title1">Lorem ipsum dolor sitconsectetueradipis</p>
+                                <div class="price1" style="height: 19px;">
+                                    <span class="reducedfrom">$66.00</span>
+                                    <span class="actual">$12.00</span>
+                                </div>
+                            </div>
+                            <div class="Details">
+                                <a href="single.html" title="Lorem ipsum dolor sit amet, consect etuer" class="button">Details<span></span></a></div>
+                        </div>
+                        <div class="col_1_of_4 span_1_of_4">
+                            <img src="images/img10.jpg" alt=""/>
+                            <div class="grid_desc">
+                                <p class="title">Lorem ipsum dolor sitconsectetueradipis</p>
+                                <p class="title1">Lorem ipsum dolor sitconsectetueradipis</p>
+                                <div class="price1" style="height: 19px;">
+                                    <span class="reducedfrom">$66.00</span>
+                                    <span class="actual">$12.00</span>
+                                </div>
+                            </div>
+                            <div class="Details">
+                                <a href="single.html" title="Lorem ipsum dolor sit amet, consect etuer" class="button">Details<span></span></a></div>
+                        </div>
+                        <div class="col_1_of_4 span_1_of_4">
+                            <img src="images/img9.jpg" alt=""/>
+                            <div class="grid_desc">
+                                <p class="title">Lorem ipsum dolor sitconsectetueradipis</p>
+                                <p class="title1">Lorem ipsum dolor sitconsectetueradipis</p>
+                                <div class="price1" style="height: 19px;">
+                                    <span class="reducedfrom">$66.00</span>
+                                    <span class="actual">$12.00</span>
+                                </div>
+                            </div>
+                            <div class="Details">
+                                <a href="single.html" title="Lorem ipsum dolor sit amet, consect etuer" class="button">Details<span></span></a></div>
+                        </div>
+                        <div class="col_1_of_4 span_1_of_4">
+                            <img src="images/img8.jpg" alt=""/>
+                            <div class="grid_desc">
+                                <p class="title">Lorem ipsum dolor sitconsectetueradipis</p>
+                                <p class="title1">Lorem ipsum dolor sitconsectetueradipis</p>
+                                <div class="price1" style="height: 19px;">
+                                    <span class="reducedfrom">$66.00</span>
+                                    <span class="actual">$12.00</span>
+                                </div>
+                            </div>
+                            <div class="Details">
+                                <a href="single.html" title="Lorem ipsum dolor sit amet, consect etuer" class="button">Details<span></span></a></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="section group">
+                        <div class="col_1_of_4 span_1_of_4">
+                            <img src="images/img7.jpg" alt=""/>
+                            <div class="grid_desc">
+                                <p class="title">Lorem ipsum dolor sitconsectetueradipis</p>
+                                <p class="title1">Lorem ipsum dolor sitconsectetueradipis</p>
+                                <div class="price1" style="height: 19px;">
+                                    <span class="reducedfrom">$66.00</span>
+                                    <span class="actual">$12.00</span>
+                                </div>
+                            </div>
+                            <div class="Details">
+                                <a href="single.html" title="Lorem ipsum dolor sit amet, consect etuer" class="button">Details<span></span></a></div>
+                        </div>
+                        <div class="col_1_of_4 span_1_of_4">
+                            <img src="images/img6.jpg" alt=""/>
+                            <div class="grid_desc">
+                                <p class="title">Lorem ipsum dolor sitconsectetueradipis</p>
+                                <p class="title1">Lorem ipsum dolor sitconsectetueradipis</p>
+                                <div class="price1" style="height: 19px;">
+                                    <span class="reducedfrom">$66.00</span>
+                                    <span class="actual">$12.00</span>
+                                </div>
+                            </div>
+                            <div class="Details">
+                                <a href="single.html" title="Lorem ipsum dolor sit amet, consect etuer" class="button">Details<span></span></a></div>
+                        </div>
+                        <div class="col_1_of_4 span_1_of_4">
+                            <img src="images/img11.jpg" alt=""/>
+                            <div class="grid_desc">
+                                <p class="title">Lorem ipsum dolor sitconsectetueradipis</p>
+                                <p class="title1">Lorem ipsum dolor sitconsectetueradipis</p>
+                                <div class="price1" style="height: 19px;">
+                                    <span class="reducedfrom">$66.00</span>
+                                    <span class="actual">$12.00</span>
+                                </div>
+                            </div>
+                            <div class="Details">
+                                <a href="single.html" title="Lorem ipsum dolor sit amet, consect etuer" class="button">Details<span></span></a></div>
+                        </div>
+                        <div class="col_1_of_4 span_1_of_4">
+                            <img src="images/img10.jpg" alt=""/>
+                            <div class="grid_desc">
+                                <p class="title">Lorem ipsum dolor sitconsectetueradipis</p>
+                                <p class="title1">Lorem ipsum dolor sitconsectetueradipis</p>
+                                <div class="price1" style="height: 19px;">
+                                    <span class="reducedfrom">$66.00</span>
+                                    <span class="actual">$12.00</span>
+                                </div>
+                            </div>
+                            <div class="Details">
+                                <a href="single.html" title="Lorem ipsum dolor sit amet, consect etuer" class="button">Details<span></span></a></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div class="footer">
+            <div class="container">
+                <p>Copyrights © 2015 AutoShop All rights reserved</p>
+            </div>
+        </div>
+        <!-- footer -->
+    </body>
+</html>
+
+<!--<!DOCTYPE html>
 <html>
 <head lang="en">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -8,7 +212,7 @@
     <script type="text/javascript" src="js/script.js"></script>
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <!--<base href='http://192.168.0.15/~user5/rest'>-->
+    <base href='http://192.168.0.15/~user5/rest'>
     <base href='http://rest-client/'>
     <title>AUTOSHOP</title>
 </head>
@@ -24,7 +228,7 @@
 
         </div>
     </div>
-    <div class="row">
+    <div class="row" >
         <div class="col-md-3">
             <div class="row">
                 <div class="col-md-12">
@@ -66,4 +270,4 @@
 </div>
 
 </body>
-</html>
+</html>-->
