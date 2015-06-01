@@ -44,7 +44,7 @@ body{
 	-ms-transition:all .2s linear;
 }
 .header{
-	background:url(../images/14.png);
+	background:url(../../images/images/14.png);
 }
 .logo{
 	text-align:center;
@@ -220,13 +220,13 @@ body{
 	padding-top:10px;
 }
 .content-box{
-	background: url(../images/banner3.jpg);
+	background: url(../../images/images/banner3.jpg);
 }
 .content-box1{
-	background: url(../images/banner2.jpg);
+	background: url(../../images/images/banner2.jpg);
 }
 .content-box2{
-	background: url(../images/banner1.jpg);
+	background: url(../../images/images/banner1.jpg);
 }
 .banner2 .price {
 	font-family: 'Patua One', cursive;
@@ -387,7 +387,7 @@ span.actual {
 	right: 8px;
 	top: 9px;
 	z-index: 1;
-	background: url(../images/det_marker.png) left top no-repeat;
+	background: url(../../images/images/det_marker.png) left top no-repeat;
 	text-indent: -9999px;
 }
 .Details a:hover {
@@ -425,7 +425,7 @@ transition: all 0.3s;
 }
 /*--footer--*/
 .footer{
-	background:url(../images/footer_bg.gif);
+	background:url(../../images/images/footer_bg.gif);
 }
 /*  GRID OF FIVE   ============================================================================= */
 .col_1_of_5{
@@ -524,7 +524,7 @@ transition: all 0.3s;
 	font-size: 12px;
 }
 .center-grid li{
-	list-style-image: url(../images/marker1.gif);
+	list-style-image: url(../../images/images/marker1.gif);
 	padding: 5px 0;
 	margin: 0 18px 10px;
 	border-bottom: 1px ridge rgba(192, 192, 192, 0.13);
@@ -928,7 +928,7 @@ font-size: 1.5em;
 	color:#333;
 }
 .btn, .btn:active, .btn:focus {
-	background: url(../images/btn.png) 100% 0 no-repeat;
+	background: url(../../images/images/btn.png) 100% 0 no-repeat;
 	letter-spacing: -1px;
 	color: #3D3D3D;
 	line-height: 21px;
@@ -956,7 +956,7 @@ font-size: 1.5em;
 	-ms-transition: all 0.5s ease-out;
 	transition: all 0.5s ease-out;
 	color: #3D3D3D;
-	background: url(../images/btn.png) 95% 0 no-repeat;
+	background: url(../../images/images/btn.png) 95% 0 no-repeat;
 	color: #BC080A;
 }
 .category{
@@ -1054,7 +1054,7 @@ font-size: 1.5em;
 	padding:7px 20px;
 	color:#FFF;
 	cursor:pointer;
-	background:#A30505 url(../images/large-button-overlay.png);
+	background:#A30505 url(../../images/images/large-button-overlay.png);
 	border: 1px solid rgba(0, 0, 0, 0.25);
 	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
 	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.50);
@@ -1285,7 +1285,7 @@ font-size: 1.5em;
 		width:100%;
 	}
 	.footer {
-		background: url(../images/footer_bg1.gif);
+		background: url(../../images/images/footer_bg1.gif);
 	}
 	p.txt_4 {
 		margin-top:0%;
@@ -1344,7 +1344,7 @@ font-size: 1.5em;
 		width:100%;
 	}
 	.footer {
-		background: url(../images/footer_bg2.gif);
+		background: url(../../images/images/footer_bg2.gif);
 	}
 	p.txt_4 {
 		margin-top:0%;
@@ -1441,7 +1441,7 @@ font-size: 1.5em;
 		width:100%;
 	}
 	.footer {
-		background: url(../images/footer_bg2.gif);
+		background: url(../../images/images/footer_bg2.gif);
 	}
 	p.txt_4 {
 		margin-top:0%;
@@ -1554,7 +1554,7 @@ font-size: 1.5em;
 		width:100%;
 	}
 	.footer {
-		background: url(../images/footer_bg2.gif);
+		background: url(../../images/images/footer_bg2.gif);
 	}
 	p.txt_4 {
 		margin-top:0%;

@@ -1,16 +1,99 @@
 @import url(http://fonts.googleapis.com/css?family=Libre+Baskerville:700);
+
 .row {
     margin-left: 0px;
     margin-right: 0px;
 }
 
-.searchAuto{
-    text-align: center;
-    background: #62647d;
-    padding: 2em 0;
+.banner {
+    max-height: 70px;
+    background-color: #4C4F62;
 }
 
-.name{
+.banner .header-bottom .logo {
+    margin-top: -15px;
+}
+
+.banner .header-bottom .head-nav {
+    margin-top: -15px;
+}
+
+.searchAuto {
+    text-align: center;
+    background: #62647d;
+    padding: 10px;
+}
+
+.searchAuto .form-inline p {
+    text-transform: uppercase;
+    font: 23px Tahoma, Helvetica, Arial, Sans-Serif;
+    color: #3B3D4E;
+    text-shadow: 0px 2px 3px #383C3D;
+    font-weight: bold;
+    padding: 0px;
+    margin: 0px;
+}
+
+#search-forms {
+    margin: 5px;
+    float: left;
+}
+
+#search-forms select {
+    color: #5BC0DE;
+
+}
+
+#search-forms input, #search-forms select {
+    background-color: #464958;
+    border-color: #4A4D60;
+}
+
+#color {
+    min-width: 183px;
+}
+
+.search-1 {
+    width: 195px;
+    display: block;
+    float: left;
+}
+
+#button-group {
+    margin-bottom: 10px;
+}
+
+.search-submit {
+    text-align: center;
+    /*width: 150px;*/
+    /*display: block;*/
+
+}
+.grid_desc{
+    /*margin-left: 5px;*/
+}
+.search-submit .form-group input {
+    margin-right: 10px;
+    min-width: 180px;
+    text-transform: uppercase;
+}
+.footer{
+
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(50, 50, 50, 0.5);
+    box-shadow: 0px 0px 5px 2px rgba(50, 50, 50, 0.5);
+}
+.portfolio h1 {
+    font-size: 2.5em;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 0.1em;
+    color: rgb(217, 220, 224);
+    text-shadow: 1px 1px 1px rgba(11, 63, 80, 1);
+}
+.col_1_of_4{
+
+}
+.name {
     font-family: 'Libre Baskerville', serif;
     font-size: 26pt;
     text-align: center;
@@ -25,7 +108,7 @@ img {
     text-align: center;
 }
 
-.container-img{
+.container-img {
     text-align: center;
 }
 
@@ -38,15 +121,15 @@ img {
     margin-top: 15px;
 }
 
-label{
+label {
     text-align: left !important;
 }
 
-#reserve{
+#reserve {
     text-align: center;
 }
 
-.carDetail{
+.carDetail {
     cursor: pointer;
 }
 
@@ -62,14 +145,14 @@ label{
     margin-top: 10px;
 }
 
-td{
+td {
     text-align: center;
 }
 
-th{
+th {
     text-align: center;
 }
 
-.glyphicon{
+.glyphicon {
     cursor: pointer;
 }

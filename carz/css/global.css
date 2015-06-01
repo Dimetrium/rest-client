@@ -45,12 +45,12 @@
 	z-index:101;
 }
 #products .prev {
-	background:url(../images/arrow-prev.png);
+	background:url(../../images/images/arrow-prev.png);
 }
 
 #products .next {
 	left:558px;
-	background:url(../images/arrow-next.png);
+	background:url(../../images/images/arrow-next.png);
 }
 
 /*****Pagination********/
