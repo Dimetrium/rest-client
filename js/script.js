@@ -1,9 +1,6 @@
-/**
- * Created by Demitry on 22.05.2015.
- */
 $(document).ready(function () {
 
-    var noneAutorization = "<button class='sign-in btn btn-info'>Sign In</button>&nbsp;<button class='sign-up btn btn-info'>Sign Up</button>";
+    var notAuthorized = "<button class='sign-in btn btn-info'>Sign In</button>&nbsp;<button class='sign-up btn btn-info'>Sign Up</button>";
     var isAutorization = "&nbsp;&nbsp;<button class='order-list btn btn-warning'>Order List</button>&nbsp;&nbsp;<button class='sign-out btn btn-danger'>Sign Out</button>";
     var loginForm = "<div id='loginbox' style='margin-top:50px;' class='mainbox col-md-6 col-md-offset-3'>" +
         "<div class='panel panel-info' ><div class='panel-heading'><div class='panel-title'>Sign in</div></div><div class='error'></div>" +
@@ -53,23 +50,25 @@ $(document).ready(function () {
 
 
     function printAllCars(data){
-        var returnData = '';
         var array = JSON.parse(data);
-        $(array).each(function (index, value){
-            if ( (index + 1) % 2 != 0){
-                returnData += "<div class='row cars'>";
-            }
-            returnData += "<div class='col-md-6'>" +
-            "<div class='container-img'>" +
-            "<img class='carDetail' src='./soap2/client/img/" + value.idCar + ".jpg" + "' title='" + value.vendor + ' ' + value.model + "' alt='no image' name='" + value.idCar+ "' />" +
-            "</div>" +
-            "<p class='content'>" + value.vendor + ' ' + value.model + "</p>" +
-            "<p class='content'>" +
-            "<input type='button' value='Reserve' class='btn btn-primary carReserve' name='" + value.idCar + "'>" +
-            "</p></div>";
-            if ( (index + 1) % 2 == 0){
-                returnData += "</div>";
-            }
+        var returnData = '';
+        $(array.data).each(function (index, value){
+            //if ( (index + 1) % 2 != 0){
+
+                returnData += "<div class='col_1_of_4 span_1_of_4'>" +
+                "<img src='images/img" + value.id + ".jpg' >" +
+                "<div class='Details'>" +
+                "<div class='grid_desc'>" +
+                "<p class='content'>" + value.brand + ' ' + value.model + "</p>" +
+                "<p class='title1'><span>Model: </span>" + value.model + "<br>" +
+                "<span>Brand: </span>" + value.brand + "<br>" +
+                "<input type='button' value='Details' class='btn btn-primary details' name='" + value.id + "'>" +
+                "</p></div></div></div>";
+
+            //}
+            //if ( (index + 1) % 2 == 0){
+            //    returnData += "</div>";
+            //}
         });
         return returnData;
     }
@@ -78,17 +77,17 @@ $(document).ready(function () {
         $.ajax({
             type: "GET",
             //url: '/~user5/rest-client/api/' ,
-            url: 'rest-client/api/',
+            url: '/api/cars',
             success: function (data) {
                 var getAllCars = printAllCars(data);
                 $("#append-all-cars").append(getAllCars);
-                if ( !localStorage['autoShopUser3'] ){
-                    $(".carReserve").css("display", "none");
-                }
+                //if ( !localStorage['autoShopUser3'] ){
+                //    $(".carReserve").css("display", "none");
+                //}
 
             },
             error: function(xhr, textStatus, error) {
-                $("#append-all-cars").append("<h4>There're no cars</h4>");
+                $(".main-box .box_wrapper h1").text('Sorry, no cars yet')
 
             }
         });
@@ -96,11 +95,10 @@ $(document).ready(function () {
 
     getAllCars();
 
-
-    $("body").on("click", ".carDetail", function(){
+    $("body").on("click", ".details", function(){
         $("#append-all-cars").empty();
-        var idCar = $(this).attr('name');
-        getDetail(idCar);
+        var id = $(this).attr('name');
+        getDetail(id);
     });
 
     $("body").on("click", ".sign-in", function(){
@@ -116,14 +114,6 @@ $(document).ready(function () {
         var email = $("#email").val();
         var password = $("#password").val();
         login(email, password);
-    });
-
-    $("body").on("click", "#signUp", function(){
-        var name = $("#name").val();
-        var email = $("#email").val();
-        var password = $("#password").val();
-        var confirm = $("#confirm").val();
-        registration(name, email, password, confirm);
     });
 
     $("body").on("click", ".glyphicon", function() {
@@ -234,7 +224,7 @@ $(document).ready(function () {
 
     });
 
-    $("body").on("click", ".sign-up", function(){
+    /*$("body").on("click", ".sign-up", function(){
         $("#append-all-cars").empty();
         var registerForm = " <div id='signupbox' style='margin-top:50px' class='mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2'>" +
             "<div class='panel panel-info'><div class='panel-heading'><div class='panel-title'>Sign Up</div>" +
@@ -252,35 +242,36 @@ $(document).ready(function () {
             "</div></div></form></div></div></div>";
 
         $("#append-all-cars").append(registerForm);
-    });
+    });*/
 
-    function getDetail(idCar){
+    function getDetail(id){
         $.ajax({
             type: "GET",
-            url: '/~user3/rest/client/api/detail/' + idCar ,
-            //url: 'rest/client/api/detail/'+ idCar,
+            //url: '/~user5/rest-client/api/detail/' + id ,
+            url: '/api/cars/' + id,
             success: function (data) {
-                var array = JSON.parse(data);
+                var arr = JSON.parse(data);
+                var array = arr.data[0];
                 var returnData = function(){
                     var data = '';
                     data += "<div class='row cars'><div class='col-md-8'><div class='content'>" +
-                    "<p>" +  array.vendor + ' ' + array.model + "</p>" +
-                    "<img src='./soap2/client/img/" + array.idCar + ".jpg" + "' title='" + array.model + "' >" +
+                    "<p>" +  array.brand + ' ' + array.model + "</p>" +
+                    "<img src='images/img" + array.id + ".jpg" + "' title='" + array.model + "' >" +
 
                     "<p>speed: " +  array.speed + " km/h</p>" +
                     "<p>color: <span style='background: " + array.color + "'>__</span></p>" +
                     "<p>price: $" + array.price + ".000 </p>" +
-                    "<p>engine: " +  array.engine + " </p>" +
+                    "<p>engine volume: " +  array.volume + " </p>" +
                     "<p>year: " +  array.year + " </p>" +
-                    "<p><input type='button' name='" + array.idCar + "' value='Reserve' class='btn btn-primary carReserve' ></p>" +
+                    "<p><input type='button' name='" + array.id + "' value='Reserve' class='btn btn-primary carReserve' ></p>" +
                     "</div></div></div>";
                     return data;
 
                 };
                 $("#append-all-cars").append(returnData());
-                if ( !localStorage['autoShopUser3'] ){
-                    $(".carReserve").css("display", "none");
-                }
+                //if ( !localStorage['autoShopUser3'] ){
+                //    $(".carReserve").css("display", "none");
+                //}
             },
             error: function(xhr, textStatus, error) {
                 $("#append-all-cars").append("<h3>" + error + "</h3");
@@ -323,13 +314,26 @@ $(document).ready(function () {
         });
     }
 
-    function registration(name, email, password, confirm){
-        $(".error").empty();
+    /**
+     * Registration part.
+     * Event and Function.
+     */
+    $("body").on("click", "#registration", function(){
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var pass = $("#password").val();
+        console.log(name);
+        //var confirm = $("#confirm").val();
+        registration(name, email, pass/*, confirm*/);
+    });
+
+    function registration(name, email, password/*, confirm*/){
+        //$(".error").empty();
         $.ajax({
-            // url: "rest/client/api/registration",
             type: "POST",
-            url: '/~user3/rest/client/api/registration' ,
-            data: {"name" : name, "email" : email, "password" :password, "confirmPassword" : confirm},
+            url: "/api/registration/",
+            //url: '/~user5/rest-client/api/registration' ,
+            data: {"name" : name, "email" : email, "password" :password/*, "confirmPassword" : confirm*/},
             statusCode: {
                 200: function (data, statusText, xhr) {
                     $("#append-all-cars").empty();
@@ -354,7 +358,7 @@ $(document).ready(function () {
 
         });
     }
-
+    // End Registration
 
     function login(email, password){
         $(".error").empty();
@@ -411,7 +415,7 @@ $(document).ready(function () {
                 {
                     localStorage.removeItem('autoShopUser3');
                     $(".place-register").empty();
-                    $(".place-register").append(noneAutorization);
+                    $(".place-register").append(notAuthorized);
                     $(".carReserve").css("display", "none");
                 },
                 401: function(xhr, statusText, error)

@@ -9,14 +9,104 @@
     <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen"/>
-    <script src="js/jquery.min.js"></script>
     <link rel="stylesheet" href="css/main.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
 <!-- header -->
+
+
+
+
 <div class="banner">
     <div class="container">
+
+        <!-- Modal -->
+        <div class="row">
+            <div class="span12">
+                <div class="modal fade" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h3>Have an Account?</h3>
+                            </div>
+                            <div class="modal-body">
+                                <div class="well">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a href="#login" data-toggle="tab">Login</a></li>
+                                        <li><a href="#create" data-toggle="tab">Create Account</a></li>
+                                    </ul>
+                                    <div id="myTabContent" class="tab-content">
+                                        <div class="tab-pane active in" id="login">
+                                            <form class="form-horizontal" action='' method="POST">
+                                                <fieldset>
+                                                    <div id="legend">
+                                                        <legend class="">Login</legend>
+                                                    </div>
+                                                    <div class="control-group">
+                                                        <!-- Username -->
+                                                        <label class="control-label" for="username">Username</label>
+
+                                                        <div class="controls">
+                                                            <input type="text" id="username" name="username"
+                                                                   placeholder=""
+                                                                   class="input-xlarge">
+                                                        </div>
+                                                    <!--</div>-->
+                                                        <br/>
+                                                    <!--<div class="control-group">-->
+                                                        <!-- Password-->
+                                                        <label class="control-label" for="password">Password</label>
+
+                                                        <div class="controls">
+                                                            <input type="password" id="password" name="password"
+                                                                   placeholder=""
+                                                                   class="input-xlarge">
+                                                        </div>
+                                                    <!--</div>-->
+
+                                                    <br/>
+
+                                                    <!--<div class="control-group">-->
+                                                        <!-- Button -->
+                                                        <div class="controls">
+                                                            <button class="btn btn-success">Login</button>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                        <div class="tab-pane fade" id="create">
+                                            <form id="tab">
+                                                <div class="control-group">
+                                                    <div class="controls"><label>Username</label>
+                                                        <input type="text" id="name" value="" class="input-xlarge"></div>
+                                                    <div class="controls"><label>Email</label>
+                                                        <input type="email" id="email" value="" class="input-xlarge"></div>
+                                                    <div class="controls"><label>Password</label>
+                                                        <input type="password" id="pass" value="" class="input-xlarge"></div>
+                                                    <div class="controls">
+                                                        <div>
+                                                            <button class="btn btn-primary" id="registration">Create Account</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Modal-->
+
         <div class="header-bottom">
             <div class="logo">
                 <a href="index.html"><img src="images/logo.png" class="img-responsive" alt=""/></a>
@@ -25,7 +115,7 @@
                 <span class="menu"> </span>
                 <ul class="cl-effect-15">
                     <li><a href="order.html" data-hover="ORDER's">ORDER's</a></li>
-                    <li class="active"><a href="index.html">REGISTRATION</a></li>
+                    <li class="active"><a data-toggle="modal" data-target="#myModal" href="#">REGISTRATION</a></li>
                     <li><a href="gallery.html" data-hover="LOGIN">LOGIN</a></li>
                     <li><a href="videos.html" data-hover="LOGOUT">LOGOUT</a></li>
                     <div class="clearfix"></div>
@@ -107,158 +197,7 @@ position: relative; ">
     <div class="container">
         <div class="main-box">
             <div class="box_wrapper"><h1>Featured Products</h1></div>
-            <div class="section group">
-                <div class="col_1_of_4 span_1_of_4">
-                    <img src="images/img11.jpg" alt=""/>
-
-                    <div class="Details">
-                        <div class="grid_desc">
-                            <p class="title1"><span>Model: </span>Mercedec<br>
-                            <span>Engine: </span>1.6<br>
-                            <span>Speed: </span>190 km/h<br>
-                            <span>Year: </span>2014<br>
-
-                            <span>Color: Black</span></p>
-
-                            <div class="price1" style="height: 19px;">
-                                <span class="reducedfrom">$66.00</span>
-                                <span class="actual">$12.00</span>
-                            </div>
-                        </div>
-                        <a href="single.html" title="Lorem ipsum dolor sit amet, consect etuer"
-                           class="button">Details<span></span></a></div>
-                </div>
-                <div class="col_1_of_4 span_1_of_4">
-                    <img src="images/img10.jpg" alt=""/>
-
-
-                    <div class="Details">
-                        <div class="grid_desc">
-                            <p class="title">Lorem ipsum dolor sitconsectetueradipis</p>
-
-                            <p class="title1">Lorem ipsum dolor sitconsectetueradipis</p>
-
-                            <div class="price1" style="height: 19px;">
-                                <span class="reducedfrom">$66.00</span>
-                                <span class="actual">$12.00</span>
-                            </div>
-                        </div>
-                        <a href="single.html" title="Lorem ipsum dolor sit amet, consect etuer"
-                           class="button">Details<span></span></a></div>
-                </div>
-                <div class="col_1_of_4 span_1_of_4">
-                    <img src="images/img9.jpg" alt=""/>
-
-
-                    <div class="Details">
-                        <div class="grid_desc">
-                            <p class="title">Lorem ipsum dolor sitconsectetueradipis</p>
-
-                            <p class="title1">Lorem ipsum dolor sitconsectetueradipis</p>
-
-                            <div class="price1" style="height: 19px;">
-                                <span class="reducedfrom">$66.00</span>
-                                <span class="actual">$12.00</span>
-                            </div>
-                        </div>
-                        <a href="single.html" title="Lorem ipsum dolor sit amet, consect etuer"
-                           class="button">Details<span></span></a></div>
-                </div>
-                <div class="col_1_of_4 span_1_of_4">
-                    <img src="images/img8.jpg" alt=""/>
-
-
-                    <div class="Details">
-                        <div class="grid_desc">
-                            <p class="title">Lorem ipsum dolor sitconsectetueradipis</p>
-
-                            <p class="title1">Lorem ipsum dolor sitconsectetueradipis</p>
-
-                            <div class="price1" style="height: 19px;">
-                                <span class="reducedfrom">$66.00</span>
-                                <span class="actual">$12.00</span>
-                            </div>
-                        </div>
-                        <a href="single.html" title="Lorem ipsum dolor sit amet, consect etuer"
-                           class="button">Details<span></span></a></div>
-                </div>
-                <div class="clear"></div>
-            </div>
-            <div class="section group">
-                <div class="col_1_of_4 span_1_of_4">
-                    <img src="images/img7.jpg" alt=""/>
-
-
-                    <div class="Details">
-                        <div class="grid_desc">
-                            <p class="title">Lorem ipsum dolor sitconsectetueradipis</p>
-
-                            <p class="title1">Lorem ipsum dolor sitconsectetueradipis</p>
-
-                            <div class="price1" style="height: 19px;">
-                                <span class="reducedfrom">$66.00</span>
-                                <span class="actual">$12.00</span>
-                            </div>
-                        </div>
-                        <a href="single.html" title="Lorem ipsum dolor sit amet, consect etuer"
-                           class="button">Details<span></span></a></div>
-                </div>
-                <div class="col_1_of_4 span_1_of_4">
-                    <img src="images/img6.jpg" alt=""/>
-
-
-                    <div class="Details">
-                        <div class="grid_desc">
-                            <p class="title">Lorem ipsum dolor sitconsectetueradipis</p>
-
-                            <p class="title1">Lorem ipsum dolor sitconsectetueradipis</p>
-
-                            <div class="price1" style="height: 19px;">
-                                <span class="reducedfrom">$66.00</span>
-                                <span class="actual">$12.00</span>
-                            </div>
-                        </div>
-                        <a href="single.html" title="Lorem ipsum dolor sit amet, consect etuer"
-                           class="button">Details<span></span></a></div>
-                </div>
-                <div class="col_1_of_4 span_1_of_4">
-                    <img src="images/img11.jpg" alt=""/>
-
-
-                    <div class="Details">
-                        <div class="grid_desc">
-                            <p class="title">Lorem ipsum dolor sitconsectetueradipis</p>
-
-                            <p class="title1">Lorem ipsum dolor sitconsectetueradipis</p>
-
-                            <div class="price1" style="height: 19px;">
-                                <span class="reducedfrom">$66.00</span>
-                                <span class="actual">$12.00</span>
-                            </div>
-                        </div>
-                        <a href="single.html" title="Lorem ipsum dolor sit amet, consect etuer"
-                           class="button">Details<span></span></a></div>
-                </div>
-                <div class="col_1_of_4 span_1_of_4">
-                    <img src="images/img10.jpg" alt=""/>
-
-
-                    <div class="Details">
-                        <div class="grid_desc">
-                            <p class="title">Lorem ipsum dolor sitconsectetueradipis</p>
-
-                            <p class="title1">Lorem ipsum dolor sitconsectetueradipis</p>
-
-                            <div class="price1" style="height: 19px;">
-                                <span class="reducedfrom">$66.00</span>
-                                <span class="actual">$12.00</span>
-                            </div>
-                        </div>
-                        <a href="single.html" title="Lorem ipsum dolor sit amet, consect etuer"
-                           class="button">Details<span></span></a></div>
-                </div>
-                <div class="clear"></div>
-            </div>
+            <div class="section group" id="append-all-cars"></div>
         </div>
     </div>
 </div>
